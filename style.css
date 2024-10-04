@@ -178,7 +178,8 @@ section {
     margin: auto 0;
 }
 
-.circle-image {
+.background-image {
+    background-image: url('./assets/background.jpeg');
     width: 400px;
     height: 400px;
     border-radius: 50%;
@@ -272,9 +273,9 @@ section {
     gap: 1rem;
 }
 
-/* ABOUT SECTION */
+/* PERSONAL_INFO SECTION */
 
-#about {
+#personal_info {
     position: relative;
 }
 
@@ -300,7 +301,7 @@ section {
 
 .arrow-icon {
     position: absolute;
-    right: -5rem;
+    right: -6rem;
     bottom: 2.5rem;
     width: 2rem;
     height: auto;
@@ -355,13 +356,7 @@ section {
     justify-content: space-around;
 }
 
-article {
-    display: flex;
-    width: 10rem;
-    justify-content: space-around;
-    gap: 0.5rem;
-}
-
 article .icon {
     cursor: default;
 }
+
