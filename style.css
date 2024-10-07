@@ -414,6 +414,49 @@ article .icon {
     height: 70vh;
 }
 
+.contact-form {
+    background: rgb(250, 250, 250);
+    padding: 2rem;
+    border: rgb(163, 163, 163) 0.1rem solid;
+    border-radius: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.contact-form label {
+    font-weight: 500;
+    color: rgb(85, 85, 85);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    border: rgb(163, 163, 163) 0.1rem solid;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 8rem;
+    resize: vertical;
+}
+
+.contact-form .btn-color-1 {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
 .contact-info-upper-container {
     display: flex;
     justify-content: center;
