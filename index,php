@@ -29,8 +29,8 @@
         case 'home':
             include 'index.html'; // Load the HTML home page
             break;
-        case 'personalinfo':
-            include 'personalinfo.php';
+        case 'personal_info':
+            include 'personal_info.php';
             break;
         case 'education':
             include 'education.php';
