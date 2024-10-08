@@ -1,0 +1,27 @@
+<?php
+// Include database connection
+include 'connect.php';
+
+// Determine which page to load based on a URL parameter
+$page = isset($_GET['page']) ? $_GET['page'] : 'home';
+
+// Display different sections based on the page value
+switch ($page) {
+    case 'contact':
+        include 'contact.php';
+        break;
+    case 'experience':
+        include 'experience.php';
+        break;
+    case 'education':
+        include 'education.php';
+        break;
+    case 'personalinfo':
+        include 'personal_info.php';
+        break;
+    default:
+        // Load the home (index.html) content
+        include 'index.html';
+        break;
+}
+?>
