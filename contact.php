@@ -1,6 +1,4 @@
 <?php
-
-include 'connect.php';
 // Enable error reporting
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -28,13 +26,37 @@ try {
         $stmt->bindParam(':message', $message);
         
         if ($stmt->execute()) {
-            echo "Message sent successfully!";
-            // Optionally, redirect back to index.html or display a success message
+            echo "<p>Message sent successfully!</p>";
         } else {
-            echo "Failed to send message.";
+            echo "<p>Failed to send message.</p>";
         }
     }
 } catch (PDOException $e) {
     // Handle connection errors
     echo "Connection failed: " . $e->getMessage();
 }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form action="contact.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea><br><br>
+        
+        <button type="submit">Send Message</button>
+    </form>
+</body>
+</html>

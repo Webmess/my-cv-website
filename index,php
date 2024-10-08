@@ -1,27 +1,55 @@
-<?php
-// Include database connection
-include 'connect.php';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your CV</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.php?page=home">Home</a></li>
+            <li><a href="index.php?page=personalinfo">Personal Info</a></li>
+            <li><a href="index.php?page=education">Education</a></li>
+            <li><a href="index.php?page=experience">Experience</a></li>
+            <li><a href="index.php?page=projects">Projects</a></li>
+            <li><a href="index.php?page=contact">Contact</a></li>
+        </ul>
+    </nav>
 
-// Determine which page to load based on a URL parameter
-$page = isset($_GET['page']) ? $_GET['page'] : 'home';
+    <?php
+    // Include database connection
+    include 'connect.php';
 
-// Display different sections based on the page value
-switch ($page) {
-    case 'contact':
-        include 'contact.php';
-        break;
-    case 'experience':
-        include 'experience.php';
-        break;
-    case 'education':
-        include 'education.php';
-        break;
-    case 'personalinfo':
-        include 'personal_info.php';
-        break;
-    default:
-        // Load the home (index.html) content
-        include 'index.html';
-        break;
-}
-?>
+    // Determine which page to load based on a URL parameter
+    $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+
+    switch ($page) {
+        case 'home':
+            include 'index.html'; // Load the HTML home page
+            break;
+        case 'personalinfo':
+            include 'personalinfo.php';
+            break;
+        case 'education':
+            include 'education.php';
+            break;
+        case 'experience':
+            include 'experience.php';
+            break;
+        case 'projects':
+            include 'projects.php';
+            break;
+        case 'contact':
+            include 'contact.php';
+            break;
+        default:
+            // If an invalid page is requested, load index.html by default
+            include 'index.html'; // Load the HTML home page again
+            break;
+    }
+    ?>
+
+</body>
+</html>
